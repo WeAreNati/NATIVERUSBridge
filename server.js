@@ -1,20 +1,21 @@
 const express = require('express');
 const cors = require('cors');
-const path = require('path');
 const helmet = require('helmet');
+const path = require('path');
 
 const app = express();
 
-// Enable CORS for the specified domain
 app.use(cors({
     origin: 'https://nati-web-pi.vercel.app/' // Replace with your actual main app domain
 }));
 
 // Use helmet to set security-related HTTP headers
 app.use(helmet({
-    frameguard: {
-        action: 'allow-from',
-        domain: 'https://nati-web-pi.vercel.app/' // Replace with your actual main app domain
+    contentSecurityPolicy: {
+        useDefaults: true,
+        directives: {
+            frameAncestors: ["'self'", "https://nati-web-pi.vercel.app/"], // Allow framing from your main site
+        }
     }
 }));
 
@@ -30,3 +31,4 @@ const port = process.env.PORT || 3000;
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
 });
+
