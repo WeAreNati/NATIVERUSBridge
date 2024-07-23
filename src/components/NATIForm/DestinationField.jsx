@@ -5,7 +5,7 @@ import SelectControlField from 'components/SelectControlField'
 
 const DestinationField = ({ control }) => {
 
-  const TokenOptions = [{ label: "itan🚀", value: "itan" }]
+  const TokenOptions = [{ label: "owl🪙.veth", value: "owl🪙" }]
   const validate = (destination) => {
     if (!destination) return "Destination is required"
     return true;
