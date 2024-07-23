@@ -7,14 +7,14 @@ const app = express();
 
 // Enable CORS for the specified domain
 app.use(cors({
-    origin: 'https://nativerusbridge.vercel.app' // Replace with your actual main app domain
+    origin: 'https://nativerus-bridge.vercel.app' // Replace with your actual main app domain
 }));
 
 // Use helmet to set security-related HTTP headers
 app.use(helmet({
     frameguard: {
         action: 'allow-from',
-        domain: 'https://nativerusbridge.vercel.app' // Replace with your actual main app domain
+        domain: 'https://nativerus-bridge.vercel.app' // Replace with your actual main app domain
     }
 }));
 

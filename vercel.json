@@ -1,7 +1,25 @@
 {
+  "version": 2,
   "build": {
     "env": {
       "NODE_OPTIONS": "--openssl-legacy-provider"
     }
-  }
+  },
+  "builds": [
+    {
+      "src": "server.js",
+      "use": "@vercel/node"
+    },
+    {
+      "src": "build/**/*",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "server.js"
+    }
+  ]
 }
+
