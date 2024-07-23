@@ -1,20 +1,20 @@
 const express = require('express');
 const cors = require('cors');
 const path = require('path');
-const helmet = require('helmet'); // Import helmet module
+const helmet = require('helmet');
 
 const app = express();
 
 // Enable CORS for the specified domain
 app.use(cors({
-    origin: 'https://nativerus-bridge.vercel.app' // Replace with your actual main app domain
+    origin: 'https://nati-web-pi.vercel.app/' // Replace with your actual main app domain
 }));
 
 // Use helmet to set security-related HTTP headers
 app.use(helmet({
     frameguard: {
         action: 'allow-from',
-        domain: 'https://nativerus-bridge.vercel.app' // Replace with your actual main app domain
+        domain: 'https://nati-web-pi.vercel.app/' // Replace with your actual main app domain
     }
 }));
 
@@ -30,4 +30,3 @@ const port = process.env.PORT || 3000;
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
 });
-
