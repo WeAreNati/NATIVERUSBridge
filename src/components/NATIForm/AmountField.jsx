@@ -18,7 +18,7 @@ const AmountField = ({ control, destination }) => {
     }
     let ERC20ADDRESS;
 
-    if (destination === "owl🪙") {
+    if (destination === "NATI") {
       ERC20ADDRESS = GLOBAL_ADDRESS.NATI
     }
     const tokenInstContract = getContract(ERC20ADDRESS, ERC20_ABI, library, account)
@@ -32,7 +32,7 @@ const AmountField = ({ control, destination }) => {
   return (
     <InputControlField
       name="amount"
-      label="Amount of NATI to swap to owl🪙.veth"
+      label="Amount of NATI to swap to NATI.vETH"
       fullWidth
       variant="standard"
       control={control}

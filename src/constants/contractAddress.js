@@ -2,7 +2,7 @@ import { DEST_PKH } from "utils/txConfig";
 
 export const DELEGATOR_ADD = process.env.REACT_APP_DELEGATOR_CONTRACT
 export const TESTNET = process.env.REACT_APP_TESTNET_ACTIVE === "true";
-export const ETHEREUM_BLOCKCHAIN_NAME = TESTNET ? "Seoplia" : "Ethereum";
+export const ETHEREUM_BLOCKCHAIN_NAME = TESTNET ? "Sepolia" : "Ethereum";
 
 export const BLOCKCHAIN_NAME = (TESTNET ? "vrsctest" : "vrsc").toUpperCase();
 
