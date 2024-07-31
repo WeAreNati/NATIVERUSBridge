@@ -14,8 +14,8 @@ export const GLOBAL_ADDRESS = TESTNET ? { // vrsctest hex 'id' names of currenci
   bridge: "0xffEce948b8A38bBcC813411D2597f7f8485a0689"
 } : {
 
-  VNATI: process.env.REACT_APP_NATI_MAIN_ERC20,
-  NATI: process.env.REACT_APP_NATI_MAIN_CONTRACT,
+  VNATI: process.env.REACT_APP_NATI_MAIN_CONTRACT,
+  NATI: process.env.REACT_APP_NATI_MAIN_ERC20,
   vETH: "0x454CB83913D688795E237837d30258d11ea7c752",
   bridge: "0x0200EbbD26467B866120D84A0d37c82CdE0acAEB"
 }
